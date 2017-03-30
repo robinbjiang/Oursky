@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task Timer</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+
+		<style type="text/css">
+			.hide {
+				display: none;
+			}
+		</style>
+
+		<script type="text/javascript">
+
+		var taskNum;
+
+			function add_task() {
+				var task=document.getElementById("input");
+				if (!task) return;
+				document.getElementById("task_view").innerHTML+="<br>"+task.value;
+				var dt = new Date();
+				var h = dt.getHours();
+				var m = dt.getMinutes();
+				var s = dt.getSeconds();
+				startTimer(h, m ,s);
+			}
+		</script>
+		
+		<script type="text/javascript" src="src/timer.js" ></script>
+	</head>
+
+	<body>
+
+	<div id="wrapper">
+		<div id="header">
+			<div class="task_timer">
+				<p><img src="pic/group.png" alt="clock" id="clock">TASK TIMER</p>
+			</div>
+		</div>
+
+		<div id="content">
+
+			<div class="input-group">
+  				<p>
+  				<input type="text" class="form-control" placeholder="Enter task name" id="input">
+				<button onclick="add_task()"><img src="pic/Group 3.png"></button>
+				<div id="task_view">
+				<div id="disp"></div>
+				</div>
+  				</p>
+			</div>
+			
+				
+
+		</div>
+
+
+
+
+		<div id="footer" class="hide">
+		<p>This is a simple tool to track tasks that last for how long, be efficient!</p>
+		</div>
+
+	</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+</html>

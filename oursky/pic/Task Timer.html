@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)file:///C:/Users/Bo/Documents/Visual%20Studio%202017/Projects/oursky/index.html# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Task Timer</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="./Task Timer_files/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="./Task Timer_files/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="./Task Timer_files/main.css">
+
+		<style type="text/css">
+			.hide {
+				display: none;
+			}
+		</style>
+
+		<script type="text/javascript">
+
+		var taskNum;
+
+			function add_task() {
+				var task=document.getElementById("todo_input");
+				if (!task) return;
+				document.getElementById("todo_view").innerHTML+="<br>"+task.value;
+			}
+		</script>
+	</head>
+
+	<body>
+
+	<div id="wrapper">
+		<div id="header">
+			<div class="task_timer">
+				<p><img src="./Task Timer_files/group.png" alt="clock" id="clock">TASK TIMER</p>
+			</div>
+		</div>
+
+		<div id="content">
+
+			<div class="input-group">
+  				<p>
+  				<input type="text" class="form-control" placeholder="Enter task name">
+				<button onclick="add_task()" id="start"><img src="./Task Timer_files/Group 3.png"></button>
+				</p><div id="todo_view"></div>
+  				<p></p>
+			</div>
+				
+		</div>
+
+
+
+
+		<div id="footer">
+		<p>This is a simple tool to track tasks that last for how long, be efficient!</p>
+		</div>
+
+	</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="./Task Timer_files/jquery.min.js.download"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="./Task Timer_files/bootstrap.min.js.download" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+</body></html>
